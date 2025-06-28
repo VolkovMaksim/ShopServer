@@ -8,4 +8,8 @@ func routes(_ app: Application) throws {
     app.get("status") { req -> String in
         return "Серверная часть проекта Shop запущена и доступна ✅"
     }
+    
+    //MARK: РЕГИСТРАЦИЯ
+    let controllerRegistration = RegistrationController()
+    app.post("registration", use: controllerRegistration.registration)
 }
