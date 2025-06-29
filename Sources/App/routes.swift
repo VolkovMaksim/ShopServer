@@ -12,4 +12,8 @@ func routes(_ app: Application) throws {
     //MARK: РЕГИСТРАЦИЯ
     let controllerRegistration = RegistrationController()
     app.post("registration", use: controllerRegistration.registration)
+    
+    //MARK: АВТОРИЗАЦИЯ
+    let controllerAuthorization = AuthorizationController()
+    app.post("authorization", use: controllerAuthorization.authorization)
 }
