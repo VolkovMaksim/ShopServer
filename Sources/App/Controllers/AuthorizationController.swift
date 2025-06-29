@@ -30,13 +30,13 @@ class AuthorizationController {
         let response = AuthorizationResponse(username: authUser?.username,
                                              email: authUser?.email,
                                              password: authUser?.password,
-                                             credit_card: authUser?.credit_card,
+                                             creditCard: authUser?.creditCard,
                                              utemsInCart: authUser?.itemsInCart,
                                              favourites: authUser?.favourites,
                                              result: authStatus,
                                              // передаем клиенту сообщение о результате авторизации/проверки заняторсти email
-                                             user_message: usersMessage.rawValue,
-                                             error_message: nil)
+                                             userMessage: usersMessage.rawValue,
+                                             errorMessage: nil)
         return req.eventLoop.future(response)
     }
 }

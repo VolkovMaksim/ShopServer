@@ -11,10 +11,10 @@ struct AuthorizationResponse: Content {
     let username: String?
     let email: String?
     let password: String?
-    let credit_card: String?
+    let creditCard: String?
     let utemsInCart: [String]?
     let favourites: [String]?
     let result: Int
-    let user_message: String
-    let error_message: String?
+    let userMessage: String
+    let errorMessage: String?
 }

@@ -18,13 +18,14 @@ class RegisteredUsers {
     //MARK: РЕГИСТРАЦИЯ
     
         // метод регистрации пользователя и проверки занятости e-mail
-    func userRegistration(body: RegistrationRequest) -> UsersMessage {
+    func userRegistration(body: RegistrationRequest) -> UsersMessages {
         // проверяем словарь на наличие объекта с ключем e-mail
         guard let _ = registeredUsers.object(forKey: body.email) as? [String: Any] else {
             // если в UserDefaults нет записи по переданному e-mail, то добавляем данные пользователя в словарь и возвращаем ответ от сервера
             userDictionary["username"] = body.username
             userDictionary["email"] = body.email
-            userDictionary["credit_card"] = ""
+            userDictionary["password"] = body.password
+            userDictionary["creditCard"] = ""
             userDictionary["itemsInCart"] = []
             userDictionary["favourites"] = []
             

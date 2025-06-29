@@ -12,7 +12,7 @@ class AuthorizedUsers {
     
     // MARK: АВТОРИЗАЦИЯ
     
-    func usersAuthorization(body: AuthorizationRequest) -> (UsersMessage, User?) {
+    func usersAuthorization(body: AuthorizationRequest) -> (UsersMessages, User?) {
         // достаем словарь с данными пользователя по email, если такой словарь есть
         guard let saveData = registeredUser.object(forKey: body.email) as? [String: Any] else {
             // если в памяти нет такого ключа-email
@@ -29,9 +29,9 @@ class AuthorizedUsers {
         let authUser = User(username: saveData["username"] as! String,
                             email: saveData["email"] as! String,
                             password: saveData["password"] as! String,
-                            credit_card: saveData["credit_card"] as! String,
-                            itemsInCart: saveData["itemsInCart"] as? [String],
-                            favourites: saveData["favourites"] as? [String])
+                            creditCard: saveData["creditCard"] as! String,
+                            itemsInCart: saveData["itemsInCart"] as! [String],
+                            favourites: saveData["favourites"] as! [String])
         
         print(authUser)
         return (.successfulAuthorization, authUser)
