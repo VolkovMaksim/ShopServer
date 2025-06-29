@@ -29,8 +29,8 @@ class RegistrationController {
         let response = RegistrationResponse(
             result: authStatus,
             // передаем клиенту сообщение о результате регистрации/проверки занятости e-mail
-            user_message: usersMessage.rawValue,
-            error_message: nil
+            userMessage: usersMessage.rawValue,
+            errorMessage: nil
         )
         
         return req.eventLoop.future(response)

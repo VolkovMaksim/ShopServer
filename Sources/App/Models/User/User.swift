@@ -11,7 +11,7 @@ struct User {
     var username: String
     var email: String
     var password: String
-    var credit_card: String
-    var itemsInCart: [String]?
-    var favourites: [String]?
+    var creditCard: String
+    var itemsInCart: [String]
+    var favourites: [String]
 }

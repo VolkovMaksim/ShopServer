@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  UsersMessages.swift
 //  
 //
 //  Created by Maksim Volkov on 28.06.2025.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum UsersMessage: String {
+enum UsersMessages: String {
     case successfulRegistration = "Регистрация прошла успешно!"
     case emailAlreadyExists = "Пользователь с таким e-mail уже зарегистрирован"
     case successfulAuthorization = "Успешная авторизация!"
