@@ -35,8 +35,7 @@ class AuthorizationController {
                                              favourites: authUser?.favourites,
                                              result: authStatus,
                                              // передаем клиенту сообщение о результате авторизации/проверки заняторсти email
-                                             userMessage: usersMessage.rawValue,
-                                             errorMessage: nil)
+                                             userMessage: usersMessage.rawValue)
         return req.eventLoop.future(response)
     }
 }
