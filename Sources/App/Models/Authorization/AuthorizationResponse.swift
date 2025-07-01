@@ -16,5 +16,4 @@ struct AuthorizationResponse: Content {
     let favourites: [String]?
     let result: Int
     let userMessage: String
-    let errorMessage: String?
 }

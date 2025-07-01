@@ -9,6 +9,5 @@ import Vapor
 
 struct RegistrationResponse: Content {
     let result: Int
-    let userMessage: String?
-    let errorMessage: String?
+    let userMessage: String
 }
